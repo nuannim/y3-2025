@@ -78,7 +78,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "shop",
         "USER": "postgres",
-        "PASSWORD": "123123123",
+        # "PASSWORD": "123123123",
+        "PASSWORD": "password",
         # ! เปลี่ยนด้วย
         "HOST": "localhost",
         "PORT": "5432",
@@ -94,6 +95,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # Add your apps here
+    "django_extensions",
     "shop",
 ]
 
