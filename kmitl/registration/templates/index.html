@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load custom_filter %}
+{% load static %}
 
 {% block title %}
   Student Dashboard
@@ -68,6 +69,15 @@
       <tbody class="divide-y divide-gray-100 text-sm">
         {% for student in student_list %}
           <tr class="hover:bg-orange-50 transition">
+            {% if student.studentprofile.image %}
+              <td class="px-4 py-3">
+                <img class="inline size-8 rounded-full mr-2" src="{{ student.studentprofile.image.url }}" alt="Profile Image">
+              </td>
+            {% else %}
+              <td class="px-4 py-3">
+                <img class="inline size-8 rounded-full mr-2" src="{% static 'no-image.png' %}" alt="Profile Image">
+              </td>
+            {% endif %}
             <td class="px-4 py-3">{{ student.student_id }}</td>
             <td class="px-4 py-3 font-medium">{{ student.get_full_name }}</td>
             <td class="px-4 py-3">{{ student.studentprofile.email }}</td>

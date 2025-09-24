@@ -48,6 +48,7 @@
                 <td class="px-4 py-3">{{ course.course_code }}</td>
                 <td class="px-4 py-3 font-medium">{{ course.course_name }}</td>
                 <td class="px-4 py-3">{{ course.credits }}</td>
+                <td><a href="{% url 'updatecourse' course.id %}"><button>edit</button></a></td>
               </tr>
             {% empty %}
               <tr>

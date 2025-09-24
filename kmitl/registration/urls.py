@@ -9,6 +9,8 @@ urlpatterns = [
     path("faculty/", views.faculty, name="faculty"),
     path("createstudent/", views.createstudent, name="createstudent"),
     path("updatestudent/<str:student_id>", views.updatestudent, name="updatestudent"),
+    path("createcourse/", views.createcourse, name="createcourse"),
+    path("updatecourse/<int:course_id>", views.updatecourse, name="updatecourse"),
     
     # path("<int:question_id>/", views.detail, name="detail"),
     # path("<int:question_id>/vote/", views.vote, name="vote"),
